@@ -1,0 +1,24 @@
+package model;
+
+public class FreeRoom extends Room {
+
+    public FreeRoom(String roomNumber, RoomType roomType) {
+        super(roomNumber, 1.0, roomType);
+    }
+
+    @Override
+    public Double getRoomPrice() {
+        return 0.0;
+    }
+
+    @Override
+    public boolean isFree() {
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Free Room - Room Number: " + getRoomNumber() +
+                ", Type: " + getRoomType();
+    }
+}
